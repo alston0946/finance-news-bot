@@ -22,7 +22,11 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-
+      - name: 查看当前目录文件
+        run: |
+          pwd
+          ls -la
+          find . -maxdepth 3 -type f
       - name: Run news bot
         env:
           SMTP_HOST: ${{ secrets.SMTP_HOST }}
