@@ -2,9 +2,6 @@ name: Daily Finance News Email
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 0 * * *"
-
 jobs:
   send-news:
     runs-on: ubuntu-latest
